@@ -1,0 +1,73 @@
+{
+  "env": "maritime",
+  "method": "iqn",
+  "seed": 1,
+  "total_timesteps": 1500000,
+  "learning_rate": 0.0001,
+  "batch_size": 32,
+  "buffer_size": 2000000,
+  "gamma": 0.99,
+  "learning_starts": 2000,
+  "update_every": 4,
+  "target_update_interval": 10000,
+  "target_tau": 1.0,
+  "max_grad_norm": 0.5,
+  "max_episode_steps": 1001,
+  "action_quantiles": 32,
+  "train_quantiles": 8,
+  "exploration_fraction": 0.25,
+  "initial_epsilon": 0.6,
+  "final_epsilon": 0.05,
+  "priority_alpha": 0.6,
+  "priority_beta": 0.4,
+  "guidance_priority_scale": 2.0,
+  "guidance_weight_start": 1.0,
+  "guidance_weight_end": 0.2,
+  "uncertainty_window": 100,
+  "uncertainty_percentile": 90,
+  "uncertainty_initial_threshold": 0.2,
+  "fine_threshold": 0.9,
+  "coarse_threshold": 0.9,
+  "pgm_checkpoint": null,
+  "save_every": 15000,
+  "eval_every": 15000,
+  "eval_episodes": 30,
+  "eval_max_steps": 361,
+  "eval_config": null,
+  "collision_penalty": -100.0,
+  "goal_reward": 50.0,
+  "timestep_penalty": -0.1,
+  "network": {
+    "self_dimension": 4,
+    "static_dimension": 15,
+    "dynamic_dimension": 20,
+    "self_feature_dimension": 32,
+    "static_feature_dimension": 120,
+    "dynamic_feature_dimension": 160,
+    "hidden_dimension": 156,
+    "action_size": 9
+  },
+  "schedule": [
+    {
+      "step": 0,
+      "robots": 3,
+      "obstacles": 1,
+      "cores": 2,
+      "min_start_goal_distance": 30.0
+    },
+    {
+      "step": 500000,
+      "robots": 5,
+      "obstacles": 2,
+      "cores": 4,
+      "min_start_goal_distance": 35.0
+    },
+    {
+      "step": 1000000,
+      "robots": 7,
+      "obstacles": 4,
+      "cores": 6,
+      "min_start_goal_distance": 40.0
+    }
+  ]
+}
