@@ -251,6 +251,12 @@ python -m pip install -r requirements-dev.txt
 python -m pytest -q
 ```
 
+## Acknowledgments
+
+Our implementation is primarily based on [Multi Robot Distributional RL Navigation](https://github.com/RobustFieldAutonomyLab/Multi_Robot_Distributional_RL_Navigation), the codebase accompanying the ICRA 2024 paper [Decentralized Multi-Robot Navigation for Autonomous Surface Vehicles with Distributional Reinforcement Learning](https://arxiv.org/abs/2402.11799). We thank the authors for making their code publicly available.
+
+The IQN architecture follows [Implicit Quantile Networks for Distributional Reinforcement Learning](https://proceedings.mlr.press/v80/dabney18a.html) by Dabney et al. (ICML 2018).
+
 ## Citation
 
 ```bibtex
